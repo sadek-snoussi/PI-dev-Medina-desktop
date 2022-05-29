@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="178.0" prefWidth="1080.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="cellBonPlanUserGal" alignment="CENTER_LEFT" prefHeight="176.0" prefWidth="1080.0" spacing="60.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="176.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="titreGallerieUser" text="Label">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="176.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="typeGallerieUser" text="Label" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="176.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="GouvGallerieUser" text="Label" />
+               </children></VBox>
+            <VBox alignment="CENTER" prefHeight="176.0" prefWidth="369.0">
+               <children>
+                  <TextArea fx:id="DescriptionGallerieUser" editable="false" prefHeight="176.0" prefWidth="278.0">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </VBox>
+            <VBox prefHeight="176.0" prefWidth="371.0">
+               <children>
+                  <ImageView fx:id="imageGallerie" fitHeight="176.0" fitWidth="350.0" nodeOrientation="INHERIT" onMouseClicked="#aggrandirImage" pickOnBounds="true" smooth="false" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

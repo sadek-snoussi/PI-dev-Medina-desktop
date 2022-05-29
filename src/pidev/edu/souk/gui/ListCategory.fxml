@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="781.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.ListCategoryController">
+   <children>
+      <Label layoutX="334.0" layoutY="19.0" text="Liste des Categories." textFill="#756f6f">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table_Cat" editable="true" layoutX="146.0" layoutY="87.0" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="200.0" prefWidth="573.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="ref_cat" prefWidth="176.0" text="Reference" />
+          <TableColumn fx:id="nom_cat" minWidth="0.0" prefWidth="396.0" text="Nom Categorie" />
+        </columns>
+      </TableView>
+      <Button fx:id="add_cat" layoutX="146.0" layoutY="60.0" mnemonicParsing="false" onAction="#redirect_to_add" style="-fx-background-color: #11bbff;" text="+" textFill="WHITE" />
+      <Button fx:id="edit_btn" layoutX="653.0" layoutY="299.0" mnemonicParsing="false" onAction="#editerCategorie" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #11bbff;" text="Edit" textFill="WHITE" />
+      <Button fx:id="remove_btn" layoutX="557.0" layoutY="300.0" mnemonicParsing="false" onAction="#show_SuppPane" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #11bbff;" text="remove" textFill="WHITE" />
+      <AnchorPane fx:id="SuppCategorieBox" layoutX="94.0" layoutY="59.0" prefHeight="233.0" prefWidth="419.0" style="-fx-background-color: ffffff; -fx-border-color: black;" visible="false">
+         <children>
+            <Label fx:id="editPane_title" layoutX="166.0" layoutY="2.0" text="Warning.">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="editPane_lab1" layoutX="12.0" layoutY="51.0" prefHeight="32.0" prefWidth="383.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="editPane_lab2" layoutX="26.0" layoutY="101.0" prefHeight="32.0" prefWidth="383.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="editPane_lab3" layoutX="14.0" layoutY="146.0" prefHeight="32.0" prefWidth="383.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="SuppPane_noBtn" layoutX="326.0" layoutY="201.0" mnemonicParsing="false" onAction="#closeEditPane" prefHeight="25.0" prefWidth="62.0" text="Non." />
+            <Button fx:id="suppPane_yesBtn" layoutX="260.0" layoutY="201.0" mnemonicParsing="false" onAction="#removeCategory" prefHeight="25.0" prefWidth="62.0" text="Oui." />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

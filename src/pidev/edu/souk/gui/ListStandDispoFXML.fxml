@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="idan2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="607.0" prefWidth="720.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.ListStandDispoFXMLController">
+   <children>
+      <TableView fx:id="standDispo" layoutX="74.0" layoutY="108.0" prefHeight="483.0" prefWidth="322.0">
+        <columns>
+          <TableColumn fx:id="superficie" prefWidth="75.0" text="Superficie" />
+          <TableColumn fx:id="emp" prefWidth="93.0" text="Emplacement" />
+            <TableColumn fx:id="couleur" prefWidth="66.0" text="Couleur" />
+            <TableColumn fx:id="prix" prefWidth="87.0" text="Prix" />
+        </columns>
+      </TableView>
+      <Label fx:id="iduser" layoutX="38.0" layoutY="25.0" />
+      <Label fx:id="idevent" layoutX="252.0" layoutY="34.0" />
+      <Label fx:id="nbstand" layoutX="47.0" layoutY="17.0" />
+      <TextField fx:id="rechercheS" layoutX="447.0" layoutY="92.0" />
+      <Button fx:id="btfind" layoutX="607.0" layoutY="92.0" mnemonicParsing="false" onAction="#findbysuperficie" style="-fx-background-color: #867f7f;" text="Recherche" textFill="WHITE" />
+      <RadioButton fx:id="btsuper" layoutX="450.0" layoutY="139.0" mnemonicParsing="false" onAction="#verifsuper" text="Superficie" />
+      <RadioButton fx:id="btprix" layoutX="561.0" layoutY="140.0" mnemonicParsing="false" onAction="#verifprix" text="Prix" />
+      <Label fx:id="sdispo" layoutX="268.0" layoutY="35.0" prefHeight="27.0" prefWidth="232.0" style="-fx-background-color: #ffffff;" text="Stands Disponibles" textFill="#ab1919">
+         <font>
+            <Font name="Arial Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="reserver" layoutX="460.0" layoutY="313.0" mnemonicParsing="false" onAction="#reserverStand" style="-fx-background-color: #ab1919;" text="Passer Votre Reservation" textFill="WHITE" />
+      <AnchorPane fx:id="idan" layoutX="99.0" layoutY="178.0" prefHeight="179.0" prefWidth="550.0">
+         <children>
+            <Label fx:id="info" alignment="CENTER" contentDisplay="CENTER" layoutX="-34.0" layoutY="82.0" prefHeight="37.0" prefWidth="592.0" text=" Votre Reçu de Reservation sera envoyer par Email" textFill="#267cb5">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="conf" layoutX="362.0" layoutY="144.0" mnemonicParsing="false" onAction="#envoyerMailReservation" style="-fx-background-color: #867f7f;" text="Envoyer Par Email" textFill="WHITE" />
+            <TextField fx:id="Email" alignment="CENTER" layoutX="213.0" layoutY="119.0" promptText="Votre Email" />
+            <Label fx:id="lbfeliii" layoutX="208.0" layoutY="63.0" prefHeight="27.0" prefWidth="158.0" style="-fx-background-color: #ffffff;" text="Félicitation" textFill="#ab1919">
+               <font>
+                  <Font name="Arial Bold Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

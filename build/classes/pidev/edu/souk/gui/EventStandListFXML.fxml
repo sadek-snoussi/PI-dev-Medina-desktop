@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.EventStandListFXMLController">
+   <children>
+      <ListView fx:id="listevent" layoutX="193.0" layoutY="36.0" prefHeight="585.0" prefWidth="806.0" />
+      <Button fx:id="btreserver" layoutX="1049.0" layoutY="339.0" mnemonicParsing="false" onAction="#loadStandDispo" style="-fx-background-color: #ab1919;" text="Reservation Stand " textFill="WHITE" />
+      <Label fx:id="iduser" layoutX="14.0" layoutY="14.0" />
+      <TextArea fx:id="idtext" editable="false" layoutX="1021.0" layoutY="215.0" prefHeight="120.0" prefWidth="186.0" text="&#10; Vous offre la possibilité &#10;    de réserver un stand&#10;        de dimension &#10;   que vous le souhaitez." wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></TextArea>
+      <Label layoutX="1041.0" layoutY="191.0" text="Souk ElMedina" textFill="#652c2c">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

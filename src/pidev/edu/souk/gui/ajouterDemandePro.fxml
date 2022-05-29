@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.AjouterDemandeProController">
+   <children>
+      <Label layoutX="123.0" layoutY="163.0" text="Numero de l'entreprise">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="206.0" layoutY="268.0" text="Spécialité">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="215.0" layoutY="324.0" text="Grade">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="131.0" layoutY="380.0" text="Logo de l entreprise">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="131.0" layoutY="121.0" text="Nom de l'entreprise">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="nomE" layoutX="316.0" layoutY="117.0" onKeyReleased="#ControlNomEntreprise" />
+      <TextField fx:id="numE" layoutX="317.0" layoutY="159.0" onKeyReleased="#controlNum" />
+      <Button fx:id="demander" layoutX="307.0" layoutY="465.0" mnemonicParsing="false" onAction="#demanderPartenariat" style="-fx-background-color: #AB1919;" text="Demander Partenariat" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Label fx:id="iduser" layoutX="42.0" layoutY="14.0" />
+      <Label layoutX="216.0" layoutY="211.0" text="Adresse">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="adresse" layoutX="316.0" layoutY="207.0" onKeyReleased="#controlAdresse" />
+      <ComboBox fx:id="grade" layoutX="316.0" layoutY="317.0" onAction="#ControlGrade" prefWidth="150.0" />
+      <Button fx:id="logo" layoutX="317.0" layoutY="379.0" mnemonicParsing="false" onAction="#chooseFile" text="Inserer le logo " />
+      <Label fx:id="labellogo" layoutX="437.0" layoutY="379.0" prefHeight="25.0" prefWidth="133.0" />
+      <Label layoutX="147.0" layoutY="31.0" text="Ajouter Demande Partenariat (Professionnel)" textFill="#cd2c0f">
+         <font>
+            <Font name="Bodoni MT" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelnum" layoutX="316.0" layoutY="188.0" prefHeight="18.0" prefWidth="242.0" textFill="#ff0707" />
+      <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="466.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" />
+      <ComboBox fx:id="specialite" layoutX="317.0" layoutY="264.0" onAction="#ControlSpecialite" prefWidth="150.0" />
+      <ImageView fx:id="numeroTick" fitHeight="25.0" fitWidth="31.0" layoutX="466.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="specialiteTick" fitHeight="25.0" fitWidth="31.0" layoutX="466.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="gradeTick" fitHeight="25.0" fitWidth="31.0" layoutX="466.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="logoTick" fitHeight="25.0" fitWidth="31.0" layoutX="570.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.SingninController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="654.0" layoutX="-11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/100_00671.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="username" layoutX="229.0" layoutY="213.0" />
+      <Label layoutX="96.0" layoutY="213.0" text="Nom d'utilisateur">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="255.0" text="Mot De Passe">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="connecter" layoutX="264.0" layoutY="303.0" mnemonicParsing="false" onAction="#connecter" style="-fx-background-color: #2f85c3;" text="Se connecter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Hyperlink fx:id="inscri" layoutX="265.0" layoutY="350.0" onAction="#inscription" text="Inscrivez-vous" />
+      <Label layoutX="209.0" layoutY="164.0" prefHeight="34.0" prefWidth="195.0" text="Connectez-Vous" textAlignment="CENTER" textFill="#2f85c3">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="mdp" layoutX="229.0" layoutY="255.0" />
+   </children>
+</AnchorPane>

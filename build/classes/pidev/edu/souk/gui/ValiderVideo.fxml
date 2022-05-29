@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.ValiderVideoController">
+   <children>
+      <Label layoutX="213.0" layoutY="8.0" text="Validation Videos">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ListView fx:id="videoList" layoutX="12.0" layoutY="48.0" prefHeight="335.0" prefWidth="502.0" />
+   </children>
+</AnchorPane>

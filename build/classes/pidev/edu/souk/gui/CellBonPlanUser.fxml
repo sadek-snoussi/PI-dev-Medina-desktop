@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="178.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="cellBonPlanUser" alignment="CENTER" prefHeight="176.0" prefWidth="884.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="176.0" prefWidth="326.0">
+               <children>
+                  <Label fx:id="titreBonPlanUser" text="Label">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="176.0" prefWidth="336.0">
+               <children>
+                  <Label fx:id="typeBonPlanUser" text="Label" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="176.0" prefWidth="336.0">
+               <children>
+                  <Rating fx:id="NjoumAffichage" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="176.0" prefWidth="350.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:C:/xampp/htdocs/Medina/web/client/media/icone-rouge1.png" />
+                     </image>
+                  </ImageView>
+               </children></VBox>
+            <ImageView fx:id="imageBonPlan" fitHeight="176.0" fitWidth="234.0" onMouseClicked="#aggrandirImage" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

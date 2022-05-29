@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneAccueil" prefHeight="717.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.AccueilPanelClientController">
+   <children>
+      <Label layoutX="189.0" layoutY="12.0" text="Vidéos les mieux notées">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ListView fx:id="topRatedVideoList" layoutX="188.0" layoutY="47.0" prefHeight="300.0" prefWidth="900.0" />
+      <Label layoutX="188.0" layoutY="355.0" text="Recommandé pour vous">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ListView fx:id="reccomandationList" layoutX="189.0" layoutY="394.0" prefHeight="300.0" prefWidth="900.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox fx:id="listEvent" alignment="TOP_CENTER" layoutX="14.0" layoutY="25.0" prefHeight="377.0" prefWidth="678.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <HBox fx:id="idbox" prefHeight="0.0" prefWidth="777.0">
+               <children>
+                  <Label fx:id="idevent" />
+                  <Label fx:id="iduser" />
+               </children>
+            </HBox>
+            <HBox fx:id="imagebox" alignment="CENTER" prefHeight="373.0" prefWidth="810.0">
+               <children>
+                  <ImageView fx:id="imageEvent" fitHeight="349.0" fitWidth="680.0" pickOnBounds="true">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></ImageView>
+                  <Label fx:id="im" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox fx:id="nomevent" alignment="CENTER" prefHeight="34.0" prefWidth="660.0">
+               <children>
+                  <Label fx:id="nome" alignment="CENTER" contentDisplay="CENTER" textAlignment="JUSTIFY" textFill="#990000">
+                     <padding>
+                        <Insets left="100.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold Italic" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <HBox fx:id="date" alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="678.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="284.0" text="Date Evenement" textFill="#756f6f">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="dateE" prefHeight="25.0" prefWidth="600.0">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="100.0" />
+                     </padding></Label>
+               </children>
+            </HBox>
+            <HBox fx:id="lieux" alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="777.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="129.0" text="Lieux" textFill="#756f6f">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lieuE" prefHeight="19.0" prefWidth="405.0" textAlignment="JUSTIFY">
+                     <padding>
+                        <Insets left="100.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="678.0">
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="19.0" prefWidth="392.0" text="Nombre Places Disponibles" textFill="#756f6f">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="nbplace" prefHeight="25.0" prefWidth="600.0" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="678.0">
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="19.0" prefWidth="381.0" text="Nombre Stands Disponibles " textFill="#756f6f">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="nbstand" prefHeight="25.0" prefWidth="600.0" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>

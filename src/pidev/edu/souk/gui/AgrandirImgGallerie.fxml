@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1200.0" prefWidth="1920.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.AgrandirImgGallerieController">
+   <children>
+      <ImageView fx:id="imgBackground" fitHeight="1144.0" fitWidth="1920.0" opacity="0.5" pickOnBounds="true" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="file:C:/xampp/htdocs/Medina/web/client/images/tun1.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="1154.0" prefWidth="1920.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="DescriptionGallerieAnexe" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="154.0" prefHeight="1048.0" prefWidth="1918.0" textFill="#111111" wrapText="true" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="154.0">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="7.0" layoutY="96.0" prefHeight="35.0" prefWidth="177.0" text="Description :">
+               <font>
+                  <Font name="Comic Sans MS" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: #ab1919;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="600.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="file:C:/xampp/htdocs/Medina/web/client/images/souk.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="LabelGallerieTitre" prefHeight="35.0" prefWidth="115.0" text="Gallerie :" textFill="#f2f2f2">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="TitreGallerieAnexe" prefHeight="35.0" prefWidth="249.0" textFill="#e4e4e4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children></HBox>
+      <ScrollBar layoutY="1100.0" prefHeight="50.0" prefWidth="1911.0" />
+   </children>
+</AnchorPane>

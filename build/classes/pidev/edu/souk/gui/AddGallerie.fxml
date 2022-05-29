@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="LayoutGuide1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="869.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.AddGallerieController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="583.0" prefWidth="855.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+         <children>
+            <VBox alignment="CENTER" fillWidth="false" layoutX="50.0" layoutY="7.0" prefHeight="539.0" prefWidth="796.0" spacing="10.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="7.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="189.0" text="Ajouter Gallerie" textFill="#11bbff">
+                     <font>
+                        <Font name="Arial Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="470.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="122.0" text="Titre gallerie*" textFill="#867f7f">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="titreGallerie" onKeyReleased="#controlTitre" prefWidth="150.0" promptText="titre" />
+                        <ImageView fx:id="TickTitre" fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="470.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="117.0" text="Type gallerie*" textFill="#867f7f">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="typeGallerie" onAction="#ControlTypeGallerie" prefWidth="150.0" promptText="Type" />
+                        <ImageView fx:id="TickTitre1" fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="470.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="119.0" text="Gouvernerat*" textFill="#867f7f">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Label>
+                        <ComboBox fx:id="Gouv" onAction="#ControlGouv" prefWidth="150.0" promptText="Tunis" />
+                        <ImageView fx:id="TickTitre11" fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="174.0" prefWidth="470.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="120.0" text="Description*" textFill="#867f7f">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Label>
+                        <TextArea fx:id="DescriptionGallerie" onKeyReleased="#DescriptionGallerie" prefHeight="174.0" prefWidth="344.0" promptText="Description" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="470.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="114.0" text="Photo Gallerie" textFill="#867f7f">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Label>
+                        <Button fx:id="imgGallerie" mnemonicParsing="false" onAction="#AjouterimgGallerie" prefHeight="26.0" prefWidth="150.0" text="Choisir image" />
+                        <ImageView fx:id="TickTitre111" fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="90.0" prefWidth="697.0" spacing="300.0">
+                     <children>
+                        <Button fx:id="BtnAjouterGallerie1" mnemonicParsing="false" onAction="#ajouterNewGallerie" prefHeight="32.0" prefWidth="242.0" style="-fx-background-color: #00ba95;" text="Ajouter Nouvelle Gallerie" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="BtnAjouterGallerie" mnemonicParsing="false" onAction="#ajouterGallerie" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #11bbff;" text="Ajouter" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

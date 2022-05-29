@@ -1,0 +1,40 @@
+
+#playButton{
+    -fx-background-image: url("/pidev/edu/souk/Images/play.png");
+    -fx-background-size: 25 25;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#pauseButton{
+    -fx-background-image: url("/pidev/edu/souk/Images/pause.png");
+    -fx-background-size: 25 25;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#stopButton{
+    -fx-background-image: url("/pidev/edu/souk/Images/stop.png");
+    -fx-background-size: 25 25;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#fastButton{
+    -fx-background-image: url("/pidev/edu/souk/Images/fasterRight.png");
+    -fx-background-size: 25 25;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#slowButton{
+    -fx-background-image: url("/pidev/edu/souk/Images/fasterLeft.png");
+    -fx-background-size: 25 25;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="661.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.AccueilAdminController">
+   <children>
+      <PieChart fx:id="piechart" layoutX="14.0" layoutY="232.0" prefHeight="282.0" prefWidth="351.0" />
+      <Label layoutX="57.0" layoutY="171.0" text="Suivi des Grades" textFill="#1772d1">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <LineChart fx:id="LineChart" layoutX="419.0" layoutY="244.0" prefHeight="305.0" prefWidth="481.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Label layoutX="530.0" layoutY="171.0" text="Suivi des Commandes" textFill="#1772d1">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

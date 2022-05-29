@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="paneVideoList" prefHeight="600.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.AffichageVideoPartenaireController">
+   <children>
+      <ListView fx:id="videoList" layoutX="189.0" layoutY="70.0" prefHeight="514.0" prefWidth="878.0" />
+      <Label layoutX="567.0" layoutY="22.0" text="Mes Videos ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

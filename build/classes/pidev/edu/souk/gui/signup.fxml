@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1401.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.SignupController">
+   <children>
+      <ImageView fitHeight="534.0" fitWidth="1401.0" layoutY="48.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/vyhled-na-medinu-a-mesitu-mesta-tunis.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c7b7b" height="500.0" layoutX="219.0" layoutY="49.0" opacity="0.59" stroke="#7c7b7b" strokeType="INSIDE" width="463.0" />
+      <TextField fx:id="nom" layoutX="436.0" layoutY="105.0" onKeyReleased="#controlNom" prefHeight="25.0" prefWidth="163.0" />
+      <TextField fx:id="prenom" layoutX="436.0" layoutY="147.0" onKeyReleased="#controlPrenom" prefHeight="25.0" prefWidth="163.0" />
+      <TextField fx:id="email" layoutX="436.0" layoutY="189.0" onKeyReleased="#controlEmail" prefHeight="25.0" prefWidth="163.0" promptText="Foulen@email.com" />
+      <TextField fx:id="username" layoutX="436.0" layoutY="233.0" onKeyPressed="#controlUsername" prefHeight="25.0" prefWidth="163.0" />
+      <Label layoutX="264.0" layoutY="105.0" text="Nom :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="264.0" layoutY="149.0" text="Prenom :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="261.0" layoutY="193.0" text="Email :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="258.0" layoutY="235.0" text="Nom de l'utilisateur :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="259.0" layoutY="285.0" text="Mot de Passe :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="num" layoutX="436.0" layoutY="372.0" onKeyPressed="#controlNumero" prefHeight="25.0" prefWidth="163.0" />
+      <Label layoutX="257.0" layoutY="327.0" text="Confirmer Mot de Passe :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="264.0" layoutY="373.0" text="Numero :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="261.0" layoutY="469.0" text="Date de Naissance :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="signup" layoutX="402.0" layoutY="510.0" mnemonicParsing="false" onAction="#signup" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #ab1919;" text="s'inscrire" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+         </graphic></Button>
+      <DatePicker fx:id="date" layoutX="439.0" layoutY="468.0" onAction="#controlDateNaiss" onKeyReleased="#controlDateNaissOnkeyReleased" prefHeight="25.0" prefWidth="163.0" />
+      <Hyperlink layoutX="32.0" layoutY="59.0" onAction="#precedent" text="&lt;&lt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="267.0" layoutY="424.0" text="Adresse : " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="address" layoutX="438.0" layoutY="426.0" prefHeight="25.0" prefWidth="163.0" />
+      <Label fx:id="labelemail" layoutX="436.0" layoutY="213.0" prefHeight="18.0" prefWidth="242.0" textFill="#ff0707" />
+      <Label fx:id="labelusername" layoutX="436.0" layoutY="256.0" prefHeight="18.0" prefWidth="242.0" textFill="#ff0707" />
+      <Label fx:id="labelNum" layoutX="436.0" layoutY="403.0" prefHeight="18.0" prefWidth="242.0" textFill="#ff0707" />
+      <Label fx:id="labeldate" layoutX="438.0" layoutY="493.0" prefHeight="17.0" prefWidth="163.0" textFill="#ff0707" />
+      <ImageView fx:id="emailTick" fitHeight="25.0" fitWidth="31.0" layoutX="601.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="usernameTick" fitHeight="25.0" fitWidth="31.0" layoutX="601.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mdpTick" fitHeight="25.0" fitWidth="31.0" layoutX="601.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mdp2Tick" fitHeight="25.0" fitWidth="31.0" layoutX="601.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="controlNumero" fitHeight="25.0" fitWidth="31.0" layoutX="601.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dateTick" fitHeight="25.0" fitWidth="31.0" layoutX="604.0" layoutY="468.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="mdp" layoutX="436.0" layoutY="281.0" onKeyReleased="#controlMDP" prefHeight="25.0" prefWidth="163.0" />
+      <PasswordField fx:id="cmdp" layoutX="436.0" layoutY="325.0" onKeyReleased="#controlMDP2" prefHeight="25.0" prefWidth="163.0" />
+      <Label fx:id="labelcmdp" layoutX="438.0" layoutY="352.0" prefHeight="17.0" prefWidth="163.0" />
+      <Label layoutX="355.0" layoutY="49.0" prefHeight="47.0" prefWidth="190.0" text="Inscription" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="38.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

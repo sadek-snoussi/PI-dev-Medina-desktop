@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.AfficheVideoPartenaireFXMLController">
+   <children>
+      <TableView fx:id="videoTable" layoutX="238.0" layoutY="56.0" prefHeight="458.0" prefWidth="533.0">
+        <columns>
+            <TableColumn fx:id="idColumn" minWidth="0.0" prefWidth="0.0" text="Id" />
+          <TableColumn fx:id="titleColumn" prefWidth="74.0" text="Titre" />
+          <TableColumn fx:id="dateColumn" prefWidth="86.0" text="Date d'ajout" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="119.0" text="Description" />
+            <TableColumn fx:id="videoColumn" prefWidth="179.0" text="Video" />
+            <TableColumn fx:id="modifColumn" prefWidth="75.0" text="Modifier" />
+        </columns>
+      </TableView>
+      <Label layoutX="312.0" layoutY="14.0" text="Mes Videos">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_titre" layoutX="25.0" layoutY="73.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="25.0" layoutY="56.0" prefHeight="17.0" prefWidth="39.0" text="Titre" />
+      <TextArea fx:id="ta_description" layoutX="25.0" layoutY="126.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="25.0" layoutY="105.0" prefHeight="17.0" prefWidth="70.0" text="Description" />
+      <Button fx:id="btn_ajouterVideo" layoutX="24.0" layoutY="371.0" mnemonicParsing="false" onAction="#ajouterVideo" prefHeight="25.0" prefWidth="200.0" text="Ajouter" />
+      <Button fx:id="btn_suupVideo" layoutX="24.0" layoutY="451.0" mnemonicParsing="false" onAction="#supprimerVideo" prefHeight="25.0" prefWidth="200.0" text="Supprimer" />
+      <Button fx:id="btn_modifierVideo" layoutX="24.0" layoutY="412.0" mnemonicParsing="false" onAction="#modifierVideo" prefHeight="25.0" prefWidth="200.0" text="Modifier" />
+      <TextField fx:id="tf_id" layoutX="25.0" layoutY="30.0" prefHeight="25.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

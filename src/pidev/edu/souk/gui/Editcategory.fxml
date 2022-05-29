@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="781.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.EditcategoryController">
+   <children>
+      <TextField fx:id="nomCategorie" layoutX="443.0" layoutY="161.0" />
+      <TextField fx:id="typeCategorie" layoutX="443.0" layoutY="112.0" />
+      <Button fx:id="submitCategorie" layoutX="521.0" layoutY="214.0" mnemonicParsing="false" onAction="#EditCatgory" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #11bbff;" text="Editer" textFill="WHITE" />
+      <Label layoutX="369.0" layoutY="46.0" text="Editer Categorie" textFill="#756f6f">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="111.0" text="Reference Categorie : " textFill="#756f6f">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="160.0" text="Nom Categorie         :  " textFill="#756f6f">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="id_cat" layoutX="705.0" layoutY="11.0" visible="false" />
+   </children>
+</AnchorPane>

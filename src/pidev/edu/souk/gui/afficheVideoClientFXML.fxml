@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorePaneAfficheVideoClient" prefHeight="646.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.AfficheVideoClientFXMLController">
+   <children>
+      <TextField fx:id="searchTextField" layoutX="988.0" layoutY="165.0" prefHeight="30.0" prefWidth="220.0" />
+      <Button fx:id="buttonSearch" layoutX="1207.0" layoutY="165.0" mnemonicParsing="false" onAction="#rechercherVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@../css/videoPlayerStyle.css" />
+      <ListView fx:id="videoList" layoutX="8.0" layoutY="206.0" prefHeight="431.0" prefWidth="1230.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dddddd" height="122.0" layoutX="1.0" layoutY="29.0" stroke="#dddddd" strokeType="INSIDE" width="1248.0" />
+      <Label alignment="CENTER" layoutX="518.0" layoutY="38.0" prefHeight="35.0" prefWidth="201.0" text="&quot;Do It Yourself&quot;">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="205.0" layoutY="94.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Entre tradition et créativité, nos artisants ouvrent les portes de leurs ateliers pour vous faire découvrir leurs métiers,produits et savoir-faire. ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="338.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrez dans leurs secrets de fabrication et laissez-vous séduire par le charme de l'artisanat !">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Label fx:id="idUser" layoutX="68.0" layoutY="169.0" />
+   </children>
+</AnchorPane>

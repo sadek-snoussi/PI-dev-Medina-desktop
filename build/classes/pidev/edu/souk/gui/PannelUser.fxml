@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fillWidth="false" prefHeight="990" prefWidth="1980" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.PannelUserController">
+   <children>
+      <HBox prefHeight="89.0" prefWidth="1980.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="86.0" prefWidth="1980.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <HBox fx:id="hboxmenu" alignment="CENTER" layoutX="233.0" prefHeight="91.0" prefWidth="1539.0" spacing="10.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="208.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="accueil" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #FFFFFF;" text="Accueil">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <MenuButton mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Produits">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#ListProduit" text="List Produits" />
+                                 </items>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </MenuButton>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="91.0" prefWidth="122.0">
+                           <children>
+                              <MenuButton mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #FFFFFF;" text="Découverte">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#BonPlanUser" text="Bonplan" />
+                                    <MenuItem mnemonicParsing="false" onAction="#GallerieUser" text="Gallerie" />
+                                    <MenuItem mnemonicParsing="false" onAction="#GuideUser" text="Guide" />
+                                 </items>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </MenuButton>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="91.0" prefWidth="139.0">
+                           <children>
+                              <MenuButton mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Evénements">
+                                 <items>
+                                    <MenuItem fx:id="btactual" mnemonicParsing="false" onAction="#loadActualite" text="Actualité" />
+                                    <MenuItem fx:id="btreserver" mnemonicParsing="false" onAction="#loadstand" text="Reserver Stand" />
+                                 </items>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </MenuButton>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="91.0" prefWidth="168.0">
+                           <children>
+                              <MenuButton fx:id="espacePart" mnemonicParsing="false" prefWidth="166.0" style="-fx-background-color: #FFFFFF;" text="Espace Partenaire">
+                                 <items>
+                                    <MenuItem fx:id="modifProfile" mnemonicParsing="false" onAction="#modifierProfile" text="Profile" />
+                                    <MenuItem fx:id="videos" mnemonicParsing="false" onAction="#videosPartenaire" text="Mes Vidéeos " />
+                                    <MenuItem fx:id="ajoutVideo" mnemonicParsing="false" onAction="#addVideo" text="Ajouter Vidéo" />
+                                    <MenuItem fx:id="MesProd_btn" mnemonicParsing="false" onAction="#MesProduits" text="Mes Produits." />
+                                    <MenuItem fx:id="MonStock_Btn" mnemonicParsing="false" onAction="#MonStock" text="Mon Stock." />
+                                 </items>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </MenuButton>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="91.0" prefWidth="189.0">
+                           <children>
+                              <Button fx:id="forum" mnemonicParsing="false" onAction="#forum" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #FFFFFF;" text="Forum">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hboximage" layoutX="14.0" layoutY="14.0" prefHeight="64.0" prefWidth="200.0" AnchorPane.leftAnchor="14.0">
+                     <children>
+                        <ImageView fx:id="souk" fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/souk.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" layoutX="1782.0" layoutY="20.0" prefHeight="32.0" prefWidth="162.0" AnchorPane.rightAnchor="35.59999999999991">
+                     <children>
+                        <ImageView fx:id="panier" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#afficherPanier" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/shopping-cart.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="login" fitHeight="31.0" fitWidth="29.0" onMouseClicked="#logDirection" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/users.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="LogoutBox" fitHeight="32.0" fitWidth="34.0" onMouseClicked="#LogoutBox" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/logout.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </HBox>
+               </children></AnchorPane>
+         </children>
+      </HBox>
+      <HBox prefHeight="895.0" prefWidth="1980.0">
+         <children>
+            <ScrollPane prefHeight="752.0" prefWidth="1980.0">
+               <content>
+                  <AnchorPane prefHeight="766.0" prefWidth="1980.0">
+                     <children>
+                        <AnchorPane prefHeight="1900.0" prefWidth="1900.0">
+                           <children>
+                              <AnchorPane fx:id="container_client" layoutX="53.0" layoutY="417.0" opacity="0.8" prefHeight="650.0" prefWidth="1250.0" style="-fx-background-color: #FBFBEF;">
+                                 <children>
+                                    <Label fx:id="iduser" layoutX="46.0" layoutY="6.0" prefHeight="17.0" prefWidth="29.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <HBox layoutX="246.0" layoutY="10.0" prefHeight="370.0" prefWidth="1980.0">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </HBox>
+                        <AnchorPane layoutX="57.0" layoutY="10.0" prefHeight="370.0" prefWidth="1248.0" style="-fx-background-color: #FBFBEF;">
+                           <children>
+                              <ImageView fitHeight="370.0" fitWidth="1012.0" layoutX="119.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/17.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="369.0" layoutX="377.0" layoutY="1.0" opacity="0.79" stroke="WHITE" strokeType="INSIDE" width="467.0" />
+                              <Text layoutX="501.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Souk El Medina">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

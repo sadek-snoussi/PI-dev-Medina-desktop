@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="LayoutGuide1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="669.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.CrudGuideController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" fillWidth="false" layoutX="8.0" layoutY="22.0" prefHeight="424.0" prefWidth="656.0" spacing="10.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="22.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="207.0" text="Ajouter un guide" textFill="#11bbff">
+                     <font>
+                        <Font name="Arial Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="26.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Nom*" textFill="#867f7f">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="NomGuide" onKeyReleased="#controlNom" prefHeight="26.0" prefWidth="150.0" promptText="Foulen" />
+                        <ImageView fx:id="TickGuide1" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="26.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Prenom*" textFill="#867f7f">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="PrenomGuide" onKeyReleased="#controlPrenom" prefWidth="150.0" promptText="Ben Foulen" />
+                        <ImageView fx:id="TickGuide11" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="26.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Telephone*" textFill="#867f7f">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="telGuide" onKeyReleased="#controlphone" prefWidth="150.0" promptText="Tel" />
+                        <ImageView fx:id="TickGuide111" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="394.0">
+                     <children>
+                        <Label fx:id="labelPhone" prefHeight="18.0" prefWidth="286.0" textFill="#39dc5f" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Mail*" textFill="#867f7f">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="mailGuide" onKeyReleased="#verifEmail" prefWidth="150.0" promptText="Foulen@email.com" />
+                        <ImageView fx:id="TickGuide112" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/1_Approved-check-checkbox-confirm-green-success-tick-512.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="321.0">
+                     <children>
+                        <Label fx:id="labelEmail" prefHeight="18.0" prefWidth="250.0" textFill="#39dc5f" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Gouvernerat*" textFill="#867f7f">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Label>
+                        <ComboBox fx:id="ComboBox" prefWidth="150.0" promptText="Tunis" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Photo Guide*" textFill="#867f7f">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Label>
+                        <Button fx:id="ajouterimg" mnemonicParsing="false" onAction="#imageGuide" prefHeight="26.0" prefWidth="150.0" text="ajouter photo profil" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="89.0" prefWidth="642.0" spacing="250.0">
+                     <children>
+                        <Button fx:id="BtnAjouterGuide1" mnemonicParsing="false" onAction="#ajouterNouveauGuide" prefHeight="32.0" prefWidth="210.0" style="-fx-background-color: #00ba95;" text="Ajouter un nouveau guide" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="BtnAjouterGuide" mnemonicParsing="false" onAction="#ajouterGuide" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #11bbff;" text="Ajouter" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

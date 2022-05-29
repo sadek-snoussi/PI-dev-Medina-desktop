@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorid" prefHeight="781.0" prefWidth="868.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.gui.InfoPartController">
+   <children>
+      <AnchorPane prefHeight="611.0" prefWidth="483.0">
+         <children>
+            <VBox alignment="BOTTOM_LEFT" layoutX="29.0" layoutY="23.0" prefHeight="565.0" prefWidth="454.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="48.0" prefWidth="454.0">
+                     <children>
+                        <Label text="Liste des Produits :" textFill="#20aee3">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="195.0" prefWidth="454.0">
+                     <children>
+                        <TableView fx:id="listProduits" prefHeight="146.0" prefWidth="409.0" style="-fx-background-color: #CED8F6;">
+                          <columns>
+                            <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+                            <TableColumn fx:id="taille" prefWidth="75.0" text="Taille" />
+                              <TableColumn fx:id="Matiere" prefWidth="95.0" text="Matière" />
+                              <TableColumn fx:id="prix" prefWidth="78.0" text="Prix" />
+                              <TableColumn fx:id="qtevendu" prefWidth="90.0" text="Qté Vendu" />
+                          </columns>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </TableView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="454.0">
+                     <children>
+                        <Label fx:id="label2" text="Total Produits Vendus :">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="totalp" prefHeight="17.0" prefWidth="40.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="50.0" top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="33.0" prefWidth="520.0">
+                     <children>
+                        <Label text="Liste de Vidéos :" textFill="#20aee3">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="149.0" prefWidth="454.0">
+                     <children>
+                        <TableView fx:id="listVideos" prefHeight="104.0" prefWidth="427.0" style="-fx-background-color: #CED8F6;">
+                          <columns>
+                            <TableColumn fx:id="titre" prefWidth="113.0" text="Titre" />
+                            <TableColumn fx:id="duree" prefWidth="66.0" text="Durée" />
+                              <TableColumn fx:id="dateExpo" prefWidth="121.0" text="Date d'Exposition" />
+                              <TableColumn fx:id="description" prefWidth="113.0" text="Description" />
+                          </columns>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </TableView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="79.0" prefWidth="454.0">
+                     <children>
+                        <Label fx:id="label1" prefHeight="21.0" prefWidth="176.0" text="Total Vidéos Postées :">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <VBox prefHeight="51.0" prefWidth="65.0">
+                           <children>
+                              <Label fx:id="totalV" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="70.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Label fx:id="iduser" layoutX="24.0" layoutY="16.0" />
+      <VBox alignment="CENTER" layoutX="500.0" layoutY="191.0" prefHeight="390.0" prefWidth="401.0">
+         <children>
+            <BarChart fx:id="ProduitsChart" prefHeight="342.0" prefWidth="458.0">
+               <xAxis>
+                  <CategoryAxis fx:id="DatePAxis" label="Mois" prefHeight="39.0" prefWidth="524.0" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="NumberPAxis" label="Quantité/Nombre_Vidéos" tickLabelFill="#b51010" />
+               </yAxis>
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+            </BarChart>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

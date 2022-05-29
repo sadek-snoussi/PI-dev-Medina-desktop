@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1250.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.ProductForClientsController">
+   <children>
+      <ListView fx:id="listView" layoutX="265.0" layoutY="42.0" prefHeight="594.0" prefWidth="921.0" style="-fx-background-color: FAFAFA;" />
+      <TextField fx:id="tf_findByName" layoutX="265.0" layoutY="11.0" prefHeight="25.0" prefWidth="894.0" promptText="Rechercher.." />
+      <AnchorPane layoutX="14.0" layoutY="43.0" prefHeight="166.0" prefWidth="241.0" style="-fx-background-color: FAFAFA; -fx-border-color: e1e1e1;">
+         <children>
+            <Label layoutX="104.0" layoutY="1.0" text="Prix." textFill="#756f6f">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prix_min" layoutX="38.0" layoutY="34.0" prefHeight="25.0" prefWidth="166.0" />
+            <TextField fx:id="prix_max" layoutX="38.0" layoutY="87.0" prefHeight="25.0" prefWidth="166.0" />
+            <Button fx:id="ByPrice_btn" layoutX="83.0" layoutY="127.0" mnemonicParsing="false" onAction="#findByPrice" style="-fx-background-color: white; -fx-border-color: e1e1e1;" text="Rechercher" textFill="#756f6f">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Label layoutX="114.0" layoutY="62.0" text="To" textFill="#756f6f" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="223.0" prefHeight="286.0" prefWidth="241.0" style="-fx-background-color: FAFAFA; -fx-border-color: e1e1e1;">
+         <children>
+            <Label layoutX="80.0" layoutY="5.0" text="Categorie." textFill="#756f6f">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="categ_btn" layoutX="23.0" layoutY="52.0" onAction="#findByCategory" prefHeight="25.0" prefWidth="194.0" style="-fx-background-color: white; -fx-border-color: e1e1e1;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="15.0" layoutY="526.0" prefHeight="109.0" prefWidth="241.0" style="-fx-background-color: FAFAFA; -fx-border-color: e1e1e1;">
+         <children>
+            <Label layoutX="76.0" layoutY="6.0" text="Tri Par Prix." textFill="#756f6f">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="triAsc_btn" layoutX="40.0" layoutY="55.0" mnemonicParsing="false" onAction="#OrderByAsc" text="Asc" textFill="#756f6f" />
+            <RadioButton fx:id="triDesc_btn" layoutX="154.0" layoutY="55.0" mnemonicParsing="false" onAction="#OrderByDesc" text="Desc" textFill="#756f6f" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="50.0" layoutY="7.0" text="Nos Produits." textFill="#756f6f">
+         <font>
+            <Font name="Arial" size="28.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="Dialog" layoutX="373.0" layoutY="54.0" prefHeight="568.0" prefWidth="625.0" style="-fx-background-color: white; -fx-border-color: #756f6f;" visible="false">
+         <children>
+            <Hyperlink fx:id="close_btn" layoutX="603.0" layoutY="3.0" onAction="#CloseDialog" text="X" textFill="#ab1919" />
+            <Label fx:id="detail_ref_title" layoutX="354.0" layoutY="46.0" text="Reference Produit : " textFill="#ab1919" />
+            <Label fx:id="detail_ref" layoutX="354.0" layoutY="69.0" prefHeight="17.0" prefWidth="210.0" text="Label" textFill="#756f6f">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="detail_date_expo_title" layoutX="353.0" layoutY="113.0" text="Date d'Exposition : " textFill="#ab1919" />
+            <Label fx:id="detail_date_expo" layoutX="350.0" layoutY="138.0" prefHeight="17.0" prefWidth="210.0" text="Label" textFill="#756f6f">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="detail_categorie_title" layoutX="350.0" layoutY="182.0" text="Catégorie :" textFill="#ab1919" />
+            <Label fx:id="detail_categorie" layoutX="351.0" layoutY="212.0" prefHeight="17.0" prefWidth="210.0" text="Label" textFill="#756f6f">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="detail_matiere_title" layoutX="356.0" layoutY="259.0" text="Matière :" textFill="#ab1919" />
+            <Label fx:id="detail_matiere" layoutX="355.0" layoutY="294.0" prefHeight="17.0" prefWidth="210.0" text="Label" textFill="#756f6f">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="detail_prix_title" layoutX="355.0" layoutY="347.0" text="Prix Demandé : " textFill="#ab1919" />
+            <Label fx:id="detail_prix" layoutX="355.0" layoutY="382.0" prefHeight="17.0" prefWidth="210.0" text="Label" textFill="#756f6f">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="detail_quantite_title" layoutX="357.0" layoutY="433.0" text="Quantité Disponible :" textFill="#ab1919" />
+            <Label fx:id="detail_quantite" layoutX="357.0" layoutY="461.0" prefHeight="17.0" prefWidth="210.0" text="Label" textFill="#756f6f">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="detail_dateExpir_title" layoutX="356.0" layoutY="504.0" text="Date d'Expiration :" textFill="#ab1919" />
+            <Label fx:id="detail_date_expir" layoutX="355.0" layoutY="526.0" prefHeight="17.0" prefWidth="210.0" text="Label" textFill="#756f6f">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="detail_nom" layoutX="16.0" layoutY="27.0" prefHeight="32.0" prefWidth="315.0" text="Label" textFill="#756f6f">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="ImgV" fitHeight="426.0" fitWidth="311.0" layoutX="15.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="AddtoCart" layoutX="16.0" layoutY="510.0" mnemonicParsing="false" onAction="#AddToCart" prefHeight="39.0" prefWidth="311.0" style="-fx-background-color: ab1919;" text="Add to Cart" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Label fx:id="idProd" layoutX="17.0" layoutY="485.0" text="Label" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+      <Button fx:id="search_btn" layoutX="1157.0" layoutY="8.0" mnemonicParsing="false" onAction="#findByName" prefHeight="25.0" prefWidth="29.0" style="-fx-background-color: ab1919;" text="o" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

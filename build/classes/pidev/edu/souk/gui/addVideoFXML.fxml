@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="addPane" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.edu.souk.controller.AddVideoFXMLController">
+   <children>
+      <HBox prefHeight="650.0" prefWidth="1250.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="325.0" />
+            <VBox prefHeight="650.0" prefWidth="600.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Titre" wrappingWidth="31.70703125">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="titre" onKeyReleased="#controlTitre" prefHeight="25.0" prefWidth="187.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label fx:id="lbltitre" prefHeight="17.0" prefWidth="167.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="66.220703125">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextArea fx:id="description" onKeyReleased="#controlDes" prefHeight="37.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Label fx:id="lbldesc" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tags" wrappingWidth="55.55078125">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="tags" onKeyReleased="#controlTags" prefHeight="25.0" prefWidth="187.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label fx:id="lbltags" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelVideo" alignment="CENTER" onKeyReleased="#controlVdeo" prefHeight="17.0" prefWidth="600.0">
+                           <HBox.margin>
+                              <Insets top="25.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ImageView fx:id="uploadIcone" fitHeight="68.0" fitWidth="67.0" onMouseClicked="#uploadVideos" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/upload%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <MediaView fx:id="videoView" fitHeight="200.0" fitWidth="350.0">
+                     <VBox.margin>
+                        <Insets left="100.0" top="10.0" />
+                     </VBox.margin>
+                  </MediaView>
+                  <Label fx:id="lblvideo" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#ajouterVideo" prefHeight="25.0" prefWidth="613.0" style="-fx-background-color: #328E2F;" text="Ajouter la video" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="idUser">
+                           <HBox.margin>
+                              <Insets left="300.0" />
+                           </HBox.margin></Label>
+                        <Label fx:id="videoURI" prefHeight="47.0" prefWidth="0.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="325.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
